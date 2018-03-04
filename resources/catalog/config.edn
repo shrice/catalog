@@ -1,0 +1,21 @@
+{:duct.core/project-ns  catalog
+ :duct.core/environment :production
+
+ :duct.module/logging {}
+ :duct.module.web/site {}
+ :duct.core/handler
+ {:middleware [#ig/ref :duct.middleware.web/format]}
+ :duct.middleware.web/format {}
+ :duct.module/cljs {:main catalog.client.core}
+
+ :duct.module/ataraxy
+ {"/" [:index]
+
+  "/api/article"
+  {:get [:article/list]}}
+
+ :catalog.handler.article/list {:uri #ig/ref :catalog.module/api}
+ :catalog.handler/index {}
+
+ :catalog.module/api
+ {:target-uri "http://cocricot.pics/catalog.html"}}
