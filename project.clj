@@ -11,6 +11,7 @@
                  [http-kit "2.2.0"]
                  [hickory "0.7.1"]]
   :plugins [[duct/lein-duct "0.10.6"]]
+  :source-paths ["src/clj" "src/cljc"]
   :main ^:skip-aot catalog.main
   :resource-paths ["resources" "target/resources"]
   :prep-tasks     ["javac" "compile" ["run" ":duct/compiler"]]
