@@ -7,9 +7,19 @@
                  [duct/module.logging "0.3.1"]
                  [duct/module.web "0.6.4"]
                  [duct/module.ataraxy "0.2.0"]
-                 [duct/module.cljs "0.3.2"]
+                 ;[duct/module.cljs "0.3.2"]
                  [http-kit "2.2.0"]
-                 [hickory "0.7.1"]]
+                 [hickory "0.7.1"]
+
+                 [re-frame "0.10.5"]
+                 [reagent "0.8.0-alpha2"]
+                 [day8.re-frame/http-fx "0.1.5"]
+
+                 [org.clojure/clojurescript "1.9.946"]
+                 [binaryage/devtools "0.9.7"]
+                 [duct/compiler.cljs "0.2.0"]
+                 [duct/server.figwheel "0.2.1"]]
+
   :plugins [[duct/lein-duct "0.10.6"]]
   :source-paths ["src/clj" "src/cljc"]
   :main ^:skip-aot catalog.main
