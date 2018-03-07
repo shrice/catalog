@@ -1,14 +1,14 @@
 (ns catalog.core
   (:require [reagent.core :as r]
-            [re-frame.core :as rf]))
+            [re-frame.core :as rf]
+            [catalog.views :as views]))
 
-(defn main
+(defn render!
   []
-  [:div
-   [:h1 "reformated catalog!"]
-   [:div "content"]])
+  (rf/clear-subscription-cache!)
+  (r/render [(views/pages :home)]
+            (js/document.getElementById "app")))
 
 (defn ^:export init
   []
-  (r/render [main]
-            (js/document.getElementById "app")))
+  (render!))

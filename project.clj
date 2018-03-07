@@ -7,7 +7,6 @@
                  [duct/module.logging "0.3.1"]
                  [duct/module.web "0.6.4"]
                  [duct/module.ataraxy "0.2.0"]
-                 ;[duct/module.cljs "0.3.2"]
                  [http-kit "2.2.0"]
                  [hickory "0.7.1"]
 
@@ -36,4 +35,5 @@
                   :resource-paths ["dev/resources"]
                   :dependencies   [[integrant/repl "0.2.0"]
                                    [eftest "0.4.1"]
-                                   [kerodon "0.9.0"]]}})
+                                   [kerodon "0.9.0"]
+                                   [binaryage/devtools "0.9.7"]]}})

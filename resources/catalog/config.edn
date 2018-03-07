@@ -6,7 +6,7 @@
  :duct.core/handler
  {:middleware [#ig/ref :duct.middleware.web/format]}
  :duct.middleware.web/format {}
- :duct.module/cljs {:main catalog.core}
+ :duct.module/cljs {:main catalog.core :figwheel {:on-jsload 'catalog.core/render!}}
 
  :duct.module/ataraxy
  {"/" [:index]
