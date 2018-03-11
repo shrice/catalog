@@ -3,10 +3,9 @@
 
  :duct.module/logging {}
  :duct.module.web/site {}
- :duct.core/handler
- {:middleware [#ig/ref :duct.middleware.web/format]}
+ :duct.core/handler {:middleware [#ig/ref :duct.middleware.web/format]}
  :duct.middleware.web/format {}
- :duct.module/cljs {:main catalog.core :figwheel {:on-jsload 'catalog.core/render!}}
+ :duct.module/cljs {:main catalog.core :figwheel {:on-jsload catalog.core/render!}}
 
  :duct.module/ataraxy
  {"/" [:index]
@@ -15,5 +14,4 @@
  :catalog.handler.article/list {:uri #ig/ref :catalog.module/api}
  :catalog.handler/index {}
 
- :catalog.module/api
- {:target-uri "http://cocricot.pics/catalog.html"}}
+ :catalog.module/api {:target-uri "http://cocricot.pics/catalog.html"}}
