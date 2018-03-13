@@ -3,8 +3,6 @@
             [clojure.string :as str]
             [duct.core :as core]))
 
-(derive :duct.module/cljs :duct/module)
-
 (defn- get-environment [config options]
   (:environment options (:duct.core/environment config :production)))
 
@@ -25,8 +23,7 @@
    {:builds ^:displace
     [{:source-paths  ["src/cljs" "src/cljc"]
       :build-options
-      {:main       main
-       :output-to  (str path "/js/main.js")
+      {:output-to  (str path "/js/main.js")
        :output-dir (str path "/js")
        :asset-path "/js"
        :closure-defines {'goog.DEBUG false}
