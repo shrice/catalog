@@ -24,6 +24,7 @@
   :main ^:skip-aot catalog.main
   :resource-paths ["resources" "target/resources"]
   :prep-tasks     ["javac" "compile" ["run" ":duct/compiler"]]
+  :uberjar-name "catalog-standalone.jar"
   :profiles
   {:dev  [:project/dev :profiles/dev]
    :repl {:prep-tasks   ^:replace ["javac" "compile"]
