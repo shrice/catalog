@@ -7,7 +7,6 @@ pom.xml.asc
 *.jar
 *.class
 .DS_Store
-.#project.clj
 /.cljs_rhino_repl
 /.lein-*
 /.nrepl-port

@@ -1,0 +1,35 @@
+.body {
+    text-align: left;
+    background-color: #eee;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-areas: "nav main";
+    grid-template-columns: 30% 70%;
+    grid-column-gap: 2%;
+}
+
+.wrapper__navbar {
+    margin-left: 5%;
+    grid-area: nav;
+}
+
+.navbar {
+    position: fixed;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.itemlist {
+    grid-area: main;
+}
+
+.itemlist section ul {
+    display: flex;
+    flex-flow: row wrap;
+}
