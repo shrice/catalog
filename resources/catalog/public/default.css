@@ -13,12 +13,15 @@
 }
 
 .wrapper__navbar {
+    height: 100%;
     margin-left: 5%;
     grid-area: nav;
 }
 
 .navbar {
     position: fixed;
+    max-height: 90%;
+    overflow-y: scroll;
 }
 
 ul {

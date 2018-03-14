@@ -35,8 +35,8 @@
   []
   (let [items @(rf/subscribe [::subs/articles])]
     [:div.container
-     [:nav.wrapper__navbar
-      [:div.navbar
+     [:div.wrapper__navbar
+      [:nav.navbar
        [:ul (for [item items] (navbar item))]]]
      [:div.itemlist (for [item items] (article item))]]))
 

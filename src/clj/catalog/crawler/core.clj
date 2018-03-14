@@ -73,7 +73,6 @@
 (defn re-formatting [uri]
   (let [res (http/get uri)
         tree (site-htree (:body @res))]
-    (->
-     (map (partial hickory->Element uri) (select-item-list tree))
+    (-> (map (partial hickory->Element uri) (select-item-list tree))
      group-by-name
      sort-by-name)))
